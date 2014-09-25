@@ -9,6 +9,7 @@
         document.addEventListener("backbutton", onBackKeyDown, false);
         document.addEventListener("menubutton", onMenuKeyDown, false);
         document.addEventListener("pause", onPause, false);
+        document.addEventListener("resume", onResume, false);
         document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
         document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
     }
@@ -28,6 +29,11 @@
 
     function onPause() {
         $("#eventos").prepend(contador+" - APP Pausado<br>");
+        contador++;
+    }
+
+    function onResume() {
+        $("#eventos").prepend(contador+" - APP Resume<br>");
         contador++;
     }
 
