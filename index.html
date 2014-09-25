@@ -19,8 +19,7 @@
 		 function monta_layout(){
 		 	$("div[data-role='page']").each(function(){
 		 		var nome = $(this).attr("id");
-		 		$(this).prepend('<div data-role="header"><h1>'+nome+'</h1></div>');
-		 		$(this).append('<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>');
+		 		$(this).prepend('<div data-role="header"><h1>'+nome+'</h1></div>').append('<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>').page();
 		 	});
 		 }
 	</script>
