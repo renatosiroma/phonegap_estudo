@@ -1,10 +1,10 @@
 // Wait for device API libraries to load
     //
-    document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", onDeviceReady_device, false);
 
     // device APIs are available
     //
-    function onDeviceReady() {
+    function onDeviceReady_device() {
 
         $("#device_inf").html(
             'Device Model: '    + device.model    + '<br />' +

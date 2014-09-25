@@ -1,9 +1,9 @@
 var pictureSource;   // picture source
 var destinationType; // sets the format of returned value
 
-document.addEventListener("deviceready",onDeviceReady,false);
+document.addEventListener("deviceready",onDeviceReady_camera,false);
 
-function onDeviceReady() {
+function onDeviceReady_camera() {
 	/* Camera */
     pictureSource=navigator.camera.PictureSourceType;
     destinationType=navigator.camera.DestinationType;
