@@ -1,3 +1,12 @@
+alert("GEO Loading");
+document.addEventListener("deviceready",onDeviceReady_geo,false);
+
+function onDeviceReady_geo(){
+	alert("TRY");
+	alert( navigator.geolocation.getCurrentPosition(onSuccess, onError) );
+	alert("TRY2");
+}
+
 var onSuccess = function(position) {
     alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
@@ -14,10 +23,4 @@ var onSuccess = function(position) {
 function onError(error) {
     alert('code: '    + error.code    + '\n' +
           'message: ' + error.message + '\n');
-}
-
-document.addEventListener("deviceready",onDeviceReady_geo,false);
-
-function onDeviceReady_geo(){
-	navigator.geolocation.getCurrentPosition(onSuccess, onError);
 }
