@@ -1,16 +1,16 @@
-	var map;
+		var map;
 
 
       document.addEventListener("deviceready", onDeviceReady_maps, false);
 
 
       function onDeviceReady_maps() {
-      	
+      	alert("LOAD MAP");
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
       }
 
       function onSuccess(position) {
-        
+        alert("Sucess");
         var element = document.getElementById('geolocation');
         
         element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
