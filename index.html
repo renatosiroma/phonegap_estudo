@@ -18,7 +18,9 @@
 
 		 function monta_layout(){
 		 	$("div[data-role='page']").each(function(){
-		 		$(this).hide();
+		 		var nome = $(this).attr("id");
+		 		$(this).prepend('<div data-role="header"><h1>'+nome+'</h1></div>');
+		 		$(this).append('<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>');
 		 	});
 		 }
 	</script>
@@ -48,29 +50,24 @@
 
 	<div data-role="page" id="camera" data-theme="a">
 
-		<button onclick="capturePhoto();">Capture Photo</button> <br>
+		<button onclick="capturePhoto();">Capture Photo</button><br>
 	    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+
 	    <div style="text-align:center">
 		    <img style="display:none;width:240px;height:240px;" id="smallImage" src="" />
 	    </div>
 
-	</div><!-- /page -->	
+	</div>	
 
 
 
 	<div data-role="page" id="connection" data-theme="a">
-		<div data-role="header"><h1>Conexão</h1></div><!-- /header -->
-
+		
 		<div role="main" class="ui-content">
 			<p>Tipo de conexão: <span id="state">LOADING...</span></p>
-		</div><!-- /content -->
+		</div>
 
-		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div><!-- navbar --></div><!-- /footer -->
-	</div><!-- /page -->	
-
-
- 
-    
+	</div>
 
 </body>
 </html>
