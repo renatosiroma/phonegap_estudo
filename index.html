@@ -1,72 +1,80 @@
 <html>
 <head>
-
+	
     <link rel="stylesheet" href="jquery.mobile-1.4.3.min.css" />
 
-	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script src="jquery-1.11.1.min.js"></script>
 	<script src="jquery.mobile-1.4.3.min.js"></script>
 
 
-	<!-- Plugins -->
 	<script type="text/javascript" src="js/conexao.js"></script>
 	<script type="text/javascript" src="js/camera.js"></script>
 	<script type="text/javascript" src="js/acelerometro.js"></script>
 
-	<script type="text/javascript">
-		 document.addEventListener("deviceready",monta_layout,false);
-
-		 function monta_layout(){
-		 	$("div[data-role='page']").each(function(){
-		 		var nome = $(this).attr("id");
-		 		$(this).prepend('<div data-role="header"><h1>'+nome+'</h1></div>').append('<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>').page();
-		 	});
-		 }
-	</script>
 </head>
 <body>
 
 	<div data-role="page" id="home" data-theme="a">
-		<ul data-role="listview" data-inset="true"> 
-		 <li data-role="list-divider">MENU</li> 
+		<div data-role="header"><h1>Plugins test</h1></div><!-- /header -->
 
-		 	<li><a href="#camera" data-transition="slide">Camera</a></li> 
-		 	<li><a href="#connection" data-transition="slide">Connection</a></li> 
-		 	<li><a href="#accelerometer" data-transition="slide">Accelerometer</a></li> 
-		 	
-		</ul> 
-	</div>
+		<div role="main" class="ui-content">
+			<ul data-role="listview" data-inset="true"> 
+			 <li data-role="list-divider">MENU</li> 
+
+			 	<li><a href="#camera" data-transition="slide">Camera</a></li> 
+			 	<li><a href="#connection" data-transition="slide">Connection</a></li> 
+			 	<li><a href="#accelerometer" data-transition="slide">Accelerometer</a></li> 
+			 	
+			</ul> 
+		</div><!-- /content -->
+	</div><!-- /page -->
 
 
 	<div data-role="page" id="accelerometer" data-theme="a">
+		<div data-role="header"><h1>Acelerometro</h1></div>
 
-		<p id="accelerometerStatus">carregando...</p>
-	    <div id="boxCanvas" style="position:relative; width: 290px; height: 300px; border: 1px solid grey;">
-	      <div id="box" style="position:absolute; width: 10px; height: 10px; left: 50%; top: 50%; background: blue;"></div>
-	    </div>
+		<div role="main" class="ui-content">
 
+			<p id="accelerometerStatus">carregando...</p>
+		    <div id="boxCanvas" style="position:relative; width: 290px; height: 300px; border: 1px solid grey;">
+		      <div id="box" style="position:absolute; width: 10px; height: 10px; left: 50%; top: 50%; background: blue;"></div>
+		    </div><!-- /content -->
+
+		</div>
+
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div><!-- navbar --></div><!-- /footer -->
 	</div>
 
 	<div data-role="page" id="camera" data-theme="a">
+		<div data-role="header"><h1>Camera</h1></div><!-- /header -->
 
-		<button onclick="capturePhoto();">Capture Photo</button><br>
-	    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+		<div role="main" class="ui-content">
+			<button onclick="capturePhoto();">Capture Photo</button> <br>
+		    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+		    <div style="text-align:center">
+			    <img style="display:none;width:240px;height:240px;" id="smallImage" src="" />
+		    </div>
+		</div><!-- /content -->
 
-	    <div style="text-align:center">
-		    <img style="display:none;width:240px;height:240px;" id="smallImage" src="" />
-	    </div>
-
-	</div>	
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div><!-- navbar --></div><!-- /footer -->
+	</div><!-- /page -->	
 
 
 
 	<div data-role="page" id="connection" data-theme="a">
-		
+		<div data-role="header"><h1>Conexão</h1></div><!-- /header -->
+
 		<div role="main" class="ui-content">
 			<p>Tipo de conexão: <span id="state">LOADING...</span></p>
-		</div>
+		</div><!-- /content -->
 
-	</div>
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div><!-- navbar --></div><!-- /footer -->
+	</div><!-- /page -->	
+
+
+ 
+    
 
 </body>
 </html>
