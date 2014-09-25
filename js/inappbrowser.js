@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>InAppBrowser Example</title>
-
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-        var iabRef = null;
+var iabRef = null;
 
         function executeScript() {
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
@@ -56,16 +48,3 @@
              iabRef.removeEventListener('loadstop', replaceHeaderImage);
              iabRef.removeEventListener('exit', iabClose);
         }
-    </script>
-
-
-  </head>
-  <body>
-    <h1>Teste InAppBrowser</h1>
-    <button onclick="executeScript()">Execute Script</button>
-    <button onclick="insertCSS()">Insert CSS</button>
-    <button onclick="fullScreen()">Full Screen</button>
-    <button onclick="openClose()">open/close</button>
-
-  </body>
-</html>

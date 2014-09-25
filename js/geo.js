@@ -1,13 +1,10 @@
-alert("GEO Loading");
+
 document.addEventListener("deviceready",onDeviceReady_geo,false);
 
 function onDeviceReady_geo(){
-	alert("TRY");
-	alert( navigator.geolocation.getCurrentPosition(onSuccess, onError) );
-	alert("TRY2");
+	
+	 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-	alert(position.coords.latitude);
-	alert(position.coords);
 }
 
 var onSuccess = function(position) {

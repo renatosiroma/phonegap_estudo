@@ -14,9 +14,13 @@
 	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/dialog.js"></script>
 	<script type="text/javascript" src="js/events.js"></script>
+	<script type="text/javascript" src="js/inappbrowser.js"></script>
+	<script type="text/javascript" src="js/store.js"></script>
 
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-	<script type="text/javascript" src="js/geo.js"></script>
+	<!-- 
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+		<script type="text/javascript" src="js/geo.js"></script>
+	-->
 	
 	<style>
 		#map-canvas{ width: 100%; height: 200px;  background: red;}
@@ -36,10 +40,14 @@
 			 	<li><a href="#connection" data-transition="slide">Connection</a></li> 
 			 	<li><a href="#accelerometer" data-transition="slide">Accelerometer</a></li> 
 			 	<!--	NOT WORKING <li><a href="#contacts" data-transition="slide">Contacts</a></li> -->
+			 	<!-- <li><a href="#geolocation" data-transition="slide">GeoLocation</a></li> -->
+
 			 	<li><a href="#device" data-transition="slide">Device</a></li>
 			 	<li><a href="#dialog" data-transition="slide">Dialogs</a></li>
 			 	<li><a href="#events" data-transition="slide">Events</a></li>
-			 	<li><a href="#geolocation" data-transition="slide">GeoLocation</a></li>
+			 	<li><a href="#inappbrowser" data-transition="slide">InApp</a></li>
+			 	<li><a href="#localstore" data-transition="slide">Local Store</a></li>
+			 	
 
 			</ul> 
 		</div>
@@ -137,6 +145,22 @@
 
 	
 
+	<div data-role="page" id="localstore" data-theme="a">
+		<div data-role="header"><h1>Local Store</h1></div>
+
+		<div role="main" class="ui-content">
+			
+		    <p><input type="text" name="nome"  id="nome" /></p>
+		    <p>
+		        <button onclick="salvar(); return false;">Salvar</button>
+		        <button onclick="ler(); return false;">Ler</button>
+		    </p>
+
+		</div>
+
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>
+	</div>
+
 
 	<div data-role="page" id="dialog" data-theme="a">
 		<div data-role="header"><h1>Dialogs</h1></div>
@@ -148,6 +172,20 @@
 		    <p><button onclick="showPrompt(); return false;">Show Prompt</button></p>
 		    <p><button onclick="playBeep(); return false;">Play Beep</button></p>
 		    <p><button onclick="vibrate(); return false;">Vibrate</button></p>
+		</div>
+
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>
+	</div>
+
+
+	<div data-role="page" id="inappbrowser" data-theme="a">
+		<div data-role="header"><h1>InAppBrowser</h1></div>
+
+		<div role="main" class="ui-content">
+			<button onclick="executeScript()">Execute Script</button><br>
+		    <button onclick="insertCSS()">Insert CSS</button><br>
+		    <button onclick="fullScreen()">Full Screen</button><br>
+		    <button onclick="openClose()">open/close</button>
 		</div>
 
 		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>
