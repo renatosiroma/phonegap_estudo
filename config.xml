@@ -2,10 +2,10 @@
 <widget id="br.com.aprender.pw.build" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Teste Navegação</name>
     <description>
-        Validar preço de produtos!
+        Estudando phonegap na pratica! jQuery Mobile
     </description>
     <author email="renato.siroma@gmail.com" href="http://sonic.enterprises">
-        Siroma
+        Renato Siroma
     </author>
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.5.0" />
