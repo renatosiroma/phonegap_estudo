@@ -16,7 +16,7 @@
 <body>
 
 	<div data-role="page" id="home" data-theme="a">
-		<div data-role="header"><h1>Plugins test</h1></div><!-- /header -->
+		<div data-role="header"><h1>Plugins test</h1></div>
 
 		<div role="main" class="ui-content">
 			<ul data-role="listview" data-inset="true"> 
@@ -25,10 +25,12 @@
 			 	<li><a href="#camera" data-transition="slide">Camera</a></li> 
 			 	<li><a href="#connection" data-transition="slide">Connection</a></li> 
 			 	<li><a href="#accelerometer" data-transition="slide">Accelerometer</a></li> 
+			 	<li><a href="#contacts" data-transition="slide">Contacts</a></li> 
 			 	
+
 			</ul> 
-		</div><!-- /content -->
-	</div><!-- /page -->
+		</div>
+	</div>
 
 
 	<div data-role="page" id="accelerometer" data-theme="a">
@@ -39,15 +41,15 @@
 			<p id="accelerometerStatus">carregando...</p>
 		    <div id="boxCanvas" style="position:relative; width: 290px; height: 300px; border: 1px solid grey;">
 		      <div id="box" style="position:absolute; width: 10px; height: 10px; left: 50%; top: 50%; background: blue;"></div>
-		    </div><!-- /content -->
+		    </div>
 
 		</div>
 
-		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div><!-- navbar --></div><!-- /footer -->
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>
 	</div>
 
 	<div data-role="page" id="camera" data-theme="a">
-		<div data-role="header"><h1>Camera</h1></div><!-- /header -->
+		<div data-role="header"><h1>Camera</h1></div>
 
 		<div role="main" class="ui-content">
 			<button onclick="capturePhoto();">Capture Photo</button> <br>
@@ -55,22 +57,36 @@
 		    <div style="text-align:center">
 			    <img style="display:none;width:240px;height:240px;" id="smallImage" src="" />
 		    </div>
-		</div><!-- /content -->
+		</div>
 
-		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div><!-- navbar --></div><!-- /footer -->
-	</div><!-- /page -->	
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>
+	</div>	
 
 
 
 	<div data-role="page" id="connection" data-theme="a">
-		<div data-role="header"><h1>Conexão</h1></div><!-- /header -->
+		<div data-role="header"><h1>Conexão</h1></div>
 
 		<div role="main" class="ui-content">
 			<p>Tipo de conexão: <span id="state">LOADING...</span></p>
-		</div><!-- /content -->
+		</div>
 
-		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div><!-- navbar --></div><!-- /footer -->
-	</div><!-- /page -->	
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>
+	</div>	
+
+
+	<div data-role="page" id="contacts" data-theme="a">
+		<div data-role="header"><h1>Contatos</h1></div>
+
+		<div role="main" class="ui-content">
+			<button onclick="getContatos();">Procurar</button> <br>
+			<div id="list_contatos"></div>
+		</div>
+
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>
+	</div>	
+
+
 
 
  

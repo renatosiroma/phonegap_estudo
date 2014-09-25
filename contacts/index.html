@@ -12,7 +12,7 @@
             function onSuccess(contacts) {
                 for (var i = 0; i < navigator.contacts.length; i++) {
                     for (var j = 0; j < contacts[i].addresses.length; j++) {
-                        alert("Pref: "         + contacts[i].addresses[j].pref          + "\n" +
+                        $("html").append("Pref: "         + contacts[i].addresses[j].pref          + "\n" +
                             "Type: "           + contacts[i].addresses[j].type          + "\n" +
                             "Formatted: "      + contacts[i].addresses[j].formatted     + "\n" +
                             "Street Address: " + contacts[i].addresses[j].streetAddress + "\n" +
@@ -22,11 +22,11 @@
                             "Country: "        + contacts[i].addresses[j].country);
                     }
                 }
-            };
+            }
 
             function onError(contactError) {
                 alert('onError!');
-            };
+            }
 
             document.addEventListener("deviceready", onDeviceReady, false);
 
