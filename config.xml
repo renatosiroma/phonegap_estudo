@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="br.com.cachina.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Testes de Plugins</name>
+    <description>
+        Plugins: Acelerometro / Camera / Conexões / Contatos / Device / Dialogs / Eventos / Location /InAppBrowser / Media / Storage
+    </description>
+    <author email="renato.siroma@gmail.com" href="http://sonic.enterprises/">
+        Renato Siroma
+    </author>
+
+    <access origin="*"/>
+
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="false" />
+    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-installLocation" value="auto" />
+
+    <gap:plugin name="org.apache.cordova.device-motion" version="0.2.6" />
+    <gap:plugin name="org.apache.cordova.camera" version="0.2.9" />
+    <gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
+    <gap:plugin name="org.apache.cordova.contacts" version="0.2.9" />
+    <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
+    <gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.2.4" />
+    <gap:plugin name="org.apache.cordova.media" version="0.2.8" />
+    
+</widget>
