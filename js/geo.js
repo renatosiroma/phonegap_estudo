@@ -5,6 +5,9 @@ function onDeviceReady_geo(){
 	alert("TRY");
 	alert( navigator.geolocation.getCurrentPosition(onSuccess, onError) );
 	alert("TRY2");
+
+	alert(position.coords.latitude);
+	alert(position.coords);
 }
 
 var onSuccess = function(position) {
