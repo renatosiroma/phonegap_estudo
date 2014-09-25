@@ -14,8 +14,16 @@
 	    document.addEventListener("deviceready",onDeviceReady,false);
 
 	    function onDeviceReady() {
+
+	    	/* Camera */
 	        pictureSource=navigator.camera.PictureSourceType;
 	        destinationType=navigator.camera.DestinationType;
+
+	        /* Connections */
+	        setInterval(function(){
+	        	checkConnection()
+	        }, 3000);
+
 	    }
 
 	    function onPhotoDataSuccess(imageData) {
@@ -45,6 +53,21 @@
 	      alert('Failed because: ' + message);
 	    }
 
+	    function checkConnection() {
+	        var networkState = navigator.connection.type;
+
+	        var states = {};
+	        states[Connection.UNKNOWN]  = 'Unknown connection';
+	        states[Connection.ETHERNET] = 'Ethernet connection';
+	        states[Connection.WIFI]     = 'WiFi connection';
+	        states[Connection.CELL_2G]  = 'Cell 2G connection';
+	        states[Connection.CELL_3G]  = 'Cell 3G connection';
+	        states[Connection.CELL_4G]  = 'Cell 4G connection';
+	        states[Connection.CELL]     = 'Cell generic connection';
+        	states[Connection.NONE]     = 'No network connection';
+
+       		document.getElementById("state").innerHTML = states[networkState];
+      }
     </script>
 
 </head>
@@ -53,7 +76,7 @@
 	<div data-role="page" id="home" data-theme="a">
 
 		<div data-role="header">
-			<h1>Exemplo de Plugins</h1>
+			<h1>Plugins test</h1>
 		</div><!-- /header -->
 
 		<div role="main" class="ui-content">
@@ -61,6 +84,7 @@
 			 <li data-role="list-divider">MENU</li> 
 
 			 	<li><a href="#camera" data-transition="slide">Camera</a></li> 
+			 	<li><a href="#connection" data-transition="slide">Connection</a></li> 
 
 			</ul> 
 		</div><!-- /content -->
@@ -88,8 +112,30 @@
 				</ul>
 			</div><!-- /navbar -->
 		</div><!-- /footer -->
-    
 	</div><!-- /page -->	
+
+
+
+	<div data-role="page" id="connection" data-theme="a">
+
+		<div data-role="header">
+			<h1>Connections</h1>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p>Network informations <br>
+				<span id="state">LOADING...</span></p>
+		</div><!-- /content -->
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home">Voltar</a></li>
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div><!-- /page -->	
+
 
 </body>
 </html>
