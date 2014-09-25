@@ -14,8 +14,11 @@
 	<script type="text/javascript" src="js/device.js"></script>
 	<script type="text/javascript" src="js/dialog.js"></script>
 	<script type="text/javascript" src="js/events.js"></script>
+	<script type="text/javascript" src="js/geo.js"></script>
 	
-
+	<style>
+		.map-canvas{ width: 100%; height: 100%; }
+	</style>
 
 </head>
 <body>
@@ -34,6 +37,7 @@
 			 	<li><a href="#device" data-transition="slide">Device</a></li>
 			 	<li><a href="#dialog" data-transition="slide">Dialogs</a></li>
 			 	<li><a href="#events" data-transition="slide">Events</a></li>
+			 	<li><a href="#geolocation" data-transition="slide">GeoLocation</a></li>
 			 	
 
 			</ul> 
@@ -118,6 +122,19 @@
 		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>
 	</div>
 
+
+	<div data-role="page" id="geolocation" data-theme="a">
+		<div data-role="header"><h1>GEO</h1></div>
+
+		<div role="main" class="ui-content">
+			<p id="geolocation">Finding geolocation...</p>
+    		<div id="map-canvas"></div>
+		</div>
+
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>
+	</div>
+
+	
 
 
 	<div data-role="page" id="dialog" data-theme="a">
