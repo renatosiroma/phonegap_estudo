@@ -1,21 +1,6 @@
  		var pictureSource;   // picture source
 	    var destinationType; // sets the format of returned value
 
-	    document.addEventListener("deviceready",onDeviceReady,false);
-
-	    function onDeviceReady() {
-
-	    	/* Camera */
-	        pictureSource=navigator.camera.PictureSourceType;
-	        destinationType=navigator.camera.DestinationType;
-
-	        /* Connections */
-	        setInterval(function(){
-	        	checkConnection()
-	        }, 3000);
-
-	    }
-
 	    function onPhotoDataSuccess(imageData) {
 	      var image = document.getElementById('smallImage');
 	      image.style.display = 'block';
