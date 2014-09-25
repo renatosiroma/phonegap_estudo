@@ -2,16 +2,23 @@
 	var map;
 	var script = document.createElement('script');
 		script.type = 'text/javascript';
-		script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp';
+		script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&callback=foicarregado';
+
 
 	window.onload = function(){ document.body.appendChild(script); }
 
+	function foicarregado(){
+		alert("GoogleMaps carregafdo");
+	}
 
-	$("#geolocation").bind("pageshow",function(){
-		navigator.geolocation.getCurrentPosition(onSuccess, onError);
-	});
+	function geoStart(){
+		alert("tentando");
+		 navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		alert("Tentou");
+	};
 
 	function onSuccess(position) {
+		alert("SUCES");
 
 		var element = document.getElementById('geolocation');
 
