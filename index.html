@@ -17,7 +17,9 @@
 		 document.addEventListener("monta_layout",onDeviceReady,false);
 
 		 function monta_layout(){
-		 	alert("FOI");
+		 	$("div[data-role='page']").each(function(){
+		 		$(this).hide();
+		 	});
 		 }
 	</script>
 </head>
