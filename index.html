@@ -10,8 +10,9 @@
 
 	<script type="text/javascript" src="js/conexao.js"></script>
 	<script type="text/javascript" src="js/camera.js"></script>
-	<script type="text/javascript" src="js/contatos.js"></script>
+	<!--<script type="text/javascript" src="js/contatos.js"></script>-->
 	<script type="text/javascript" src="js/device.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
 	
 
 
@@ -30,6 +31,7 @@
 			 	<li><a href="#accelerometer" data-transition="slide">Accelerometer</a></li> 
 			 	<!--	NOT WORKING <li><a href="#contacts" data-transition="slide">Contacts</a></li> -->
 			 	<li><a href="#device" data-transition="slide">Device</a></li>
+			 	<li><a href="#dialog" data-transition="slide">Dialogs</a></li>
 			 	
 
 			</ul> 
@@ -103,6 +105,21 @@
 	</div>
 
 
+
+	<div data-role="page" id="dialog" data-theme="a">
+		<div data-role="header"><h1>Dialogs</h1></div>
+
+		<div role="main" class="ui-content">
+		    <p><button onclick="alert('NORMAL'); return false;">Alert HTML</button></p>
+		    <p><button onclick="showAlert(); return false;">Show Alert</button></p>
+		    <p><button onclick="showConfirm(); return false;">Show Confirm</button></p>
+		    <p><button onclick="showPrompt(); return false;">Show Prompt</button></p>
+		    <p><button onclick="playBeep(); return false;">Play Beep</button></p>
+		    <p><button onclick="vibrate(); return false;">Vibrate</button></p>
+		</div>
+
+		<div data-role="footer" data-position="fixed"><div data-role="navbar"><ul><li><a href="#home">Voltar</a></li></ul></div></div>
+	</div>
  
     <script type="text/javascript" src="js/acelerometro.js"></script>
 
