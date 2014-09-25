@@ -1,4 +1,4 @@
-var watchID;
+		var watchID;
 
 		$("#accelerometer").bind("pageshow",function(){
 
